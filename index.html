@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* Intro section */
+  .intro {
+    min-height: 100vh;
+    background: #001f3f; /* navy blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .intro h1 {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    max-width: 680px;
+    font-weight: 500;
+  }
+  .intro button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #001f3f;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro button:hover {
+    background: #ddd;
+  }
+
+  /* Ready section */
+  .ready {
+    display: none;
+    min-height: 100vh;
+    background: #001f3f;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .ready.show {
+    display: flex;
+  }
+  .ready h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  .ready button {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #001f3f;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Cinzel', serif;
+  }
+  .ready button:hover {
+    background: #ddd;
+  }
+
+  /* Video section */
+  .video-section {
+    display: none;
+    min-height: 100vh;
+    background: #111;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .video-section.show {
+    display: flex;
+  }
+  .video-section .inner {
+    color: #eee;
+  }
+  video {
+    width: 90vw;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+
+  <div class="intro" id="introPage">
+    <div>
+      <h1>Happy Birthday to the Girl that I love the most.<br><br>I spent a lot of time thinking about what to get you this year, but I kept coming back to the idea of making something with my own hands. I put so much care and effort into every single detail of this gift, constantly wondering if you'd like it while making it. It might not be flawless, but it’s filled with so much love. I really hope it brings a big smile to your face today.</h1>
+      <button onclick="showReady()">Continue</button>
+    </div>
+  </div>
+
+  <div class="ready" id="readyPage">
+    <div>
+      <h1>ARE YOU READY !?!</h1>
+      <button onclick="showVideo()">Yes!</button>
+    </div>
+  </div>
+
+  <div class="video-section" id="videoPage">
+    <div class="inner">
+      <video controls>
+        <!-- Replace "my-video.mp4" with the filename of your video -->
+        <source src="24thspz.mp4" type="video/mp4">
+        Your browser doesn't support embedded videos.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function showReady() {
+      document.getElementById('introPage').style.display = 'none';
+      document.getElementById('readyPage').classList.add('show');
+    }
+    function showVideo() {
+      document.getElementById('readyPage').style.display = 'none';
+      document.getElementById('videoPage').classList.add('show');
+    }
+  </script>
+
+</body>
+</html>
